@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+ 
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.col {
+    float: left;
+    width: 100%;
+}
+
+.col-80 {
+    width: 100%;
+
+}
+
+.col-75 {
+    width: 75%;
+}
+.col-25 {
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.row {
+}
+
+:root {
+    --header-color: linear-gradient(90deg,azure, rgb(65, 65, 143));
+}
+
+#header {
+    height: 54px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.admin-login-icon {
+    float: right;
+    margin-right: 10px;
+   font-size: 35px;
+   line-height: 54px;
+   color: rgb(247, 183, 21);
+    
+}
+
+
+
+
+
+#content {
+    position: relative;
+    height: 100%;
+    /* background: url(https://img.meta.com.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg) no-repeat top center /cover; */
+}
+
+#video_background {
+
+    position: absolute;
+    
+    bottom: 0px;
+    
+    right: 0px;
+    
+    min-width: 100%;
+    
+    min-height: 100%;
+    
+    width: auto;
+    
+    height: auto;
+    
+    z-index: -1000;
+    
+    overflow: hidden;
+    
+    }
+
+.user-login {
+    padding: 30px;
+    position: absolute;
+    right: 50%;
+    transform: translateX(+50%);
+    top:70%;
+    z-index: 2;
+
+}
+
+.id-login {
+    padding: 6px 20px;
+    line-height: 1.6;
+    font-size: large;
+    background-color: rgb(0,0,0,0.7);
+    color: rgb(254,254,254,0.5);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    
+}
+
+.user-login-button {
+    padding: 6px 20px;
+    margin-top: 30px;
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: translateX(-42%);
+    color: rgb(254,254,254,0.5);
+    font-size: larger;
+    background-color: rgb(0,0,0,0.7);
+    text-align: center;
+
+}
+
+.admin-login-button {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+

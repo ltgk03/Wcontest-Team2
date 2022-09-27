@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.col {
+    float: left;
+    width: 100%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-75 {
+    width: 75%;
+}
+.col-25 {
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.row {
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+#header {
+    background: var(--header-color);
+    height: 54px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+
+
+:root {
+    --header-color: linear-gradient(90deg,#2a9c5f, #FFC258);
+}
+
