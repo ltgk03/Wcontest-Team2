@@ -13,33 +13,47 @@
 <body>
 
     <div id="header">
-        <a href=""></a>
-    </div id="content">
-        <div id="slider">
-            <video id= "video_background" preload="auto" autoplay="true" loop="loop">
-
-            <source src="./assets/video-background/video-background.mp4"/>
-            
-        </video></div>
-        <!-- Background -->
-        
-        <!-- End Background -->
-        <div class="user-login row">
-            
-            <input class="id-login col-80" type="text" placeholder="Mời nhập ID">
-            <div></div>
-            <button class="user-login-button">Làm bài kiểm tra</button>
+        <div class="content-text">
+            <h1 class="content-text-heading">Hệ thống kiểm tra online của rabiloo</h1>
         </div>
-
         <div class="admin-login">
-            <i class="admin-login-button fa-solid fa-bars"></i>
+            <a href="adminUI.html"><i class="admin-login-button fa-solid fa-bars"></i></a>
         </div>
+    </div id="content">
+    <!-- Background -->
+    <div id="slider">
+        <video id="video_background" autoplay muted loop>
 
+            <source src="./assets/video-background/video-background2.mp4" type="video/mp4" />
+
+        </video>
+    </div>
+    <!-- End Background -->
+
+    <!-- Content text -->
+    
+    <!-- End Content text -->
+    <!-- User login form -->
+    <div class="user-login row">
+
+        <input class="id-login col-80" type="text" placeholder="Enter your id">
+        <div></div>
+        <button class="user-login-button">Login</button>
+    </div>
+    <!-- End User login form -->
+
+    
 
 
     </div>
 
-   
+    <script>
+        function dieu_huong() {
+            location.assign("adminUI.html");
+        }
+    </script>
+
+
 </body>
 
 </html>
