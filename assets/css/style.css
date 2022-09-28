@@ -113,7 +113,7 @@ body {
     font-size: 25px;
     text-align: center;
     border-color: white;
-    
+    border-radius: 20px 20px 20px 20px;
 }
 
 .user-login-button {
@@ -127,9 +127,10 @@ body {
     transform: translateX(-42%);
     color: rgb(254,254,254,0.5);
     font-size: larger;
-    background-color: rgb(0,0,0,0.7);
+    background-color: rgb(0,0,0,1);
     text-align: center;
     border-color: white;
+    border-radius: 20px 20px 20px 20px;
 
 }
 
