@@ -25,14 +25,14 @@
     display: flex;
 }
 
-.add-exam {
+.control-btn {
     background-color: #3cb4e7;
     color: #F7F7F7;
     border-radius: 20px;
     font-size: 0.9rem;
 }
 
-.add-exam:hover {
+.control-btn :hover {
     background-color: #F7F7F7;  
     color: #FFC258;
     border: none;

@@ -72,10 +72,35 @@
         </div>
         <div class="col">
             <div class="top-bar">
-                <button type="button" class="px-4 pt-2 pb-2 add-exam mt-3 mb-3"><i class="bi bi-file-earmark-plus"></i><span class="ms-2">ADD EXAM</span></button>
-            </div>    
+                <button type="button" class="btn control-btn px-4 pt-2 pb-2 mt-3 mb-3">
+                    <i class="bi bi-file-earmark-plus"></i>
+                    <span class="ms-2">ADD EXAM</span>
+                </button>
+            </div>   
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Exam</th>
+                    <th scope="col">View exam</th>
+                    <th scope="col">Due date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Average test time</th>
+                    <th scope="col">Exam control</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Test</th>
+                    <td><button type="button" class="btn control-btn">View Exam</button></td>
+                    <td>29/09/2022</td>
+                    <td>Active</td>
+                    <td> 12 min</td>
+                    <td> <button class="btn control-btn"><i class="bi bi-pencil-fill"></i></button> <button class="btn control-btn"><i class="bi bi-trash-fill"></i></button></td>
+                  </tr>
+                </tbody>
+              </table> 
         </div>
-    </div>s
+    </div>
 
     </div>
 </body>
