@@ -30,10 +30,14 @@
     color: #F7F7F7;
     border-radius: 20px;
     font-size: 0.9rem;
+    line-height: 8%;
 }
 
-.control-btn :hover {
-    background-color: #F7F7F7;  
+.top-bar .control-btn:hover {
+    background-color: white;  
     color: #FFC258;
     border: none;
 }
+
+
+
