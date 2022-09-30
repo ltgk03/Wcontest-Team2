@@ -30,40 +30,38 @@
                     <a href="https://rabiloo.com/vi"
                         class="d-flex align-items-center pb-3 mb-md-0 me-md-auto navbar-brand">
                         <span class="fs-5 d-none d-sm-inline">
-                            <img src="https://rabiloo.com/images/logo-menu-blue.svg" alt=""
-                                class="block lg:hidden ml-3">
+                            <img src="https://rabiloo.com/images/logo-menu-blue.svg" alt="" class="block lg:hidden ml-3">
                         </span>
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">
                         <li class="nav-item menu-item">
-                            <a href="#" class="nav-link align-middle px-0">
+                            <a href="#" class="nav-link align-middle px-0" id="allexam-btn">
                                 <i class="bi bi-card-text"></i><span class="ms-1 d-none d-sm-inline">All exams</span>
                             </a>
                         </li>
 
                         <li class="nav-item menu-item">
-                            <a href="#" class="nav-link align-middle px-0">
+                            <a href="#" class="nav-link align-middle px-0" id="result-btn">
                                 <i class="bi bi-award-fill"></i><span class="ms-1 d-none d-sm-inline">Results</span>
                             </a>
                         </li>
 
                         <li class="nav-item menu-item">
-                            <a href="#" class="nav-link align-middle px-0">
+                            <a href="#" class="nav-link align-middle px-0" id="report-btn">
                                 <i class="bi bi-bar-chart-fill"></i> <span class="ms-1 d-none d-sm-inline">Report</span>
                             </a>
                         </li>
 
                         <li class="nav-item menu-item">
-                            <a href="#" class="nav-link align-middle px-0">
+                            <a href="#" class="nav-link align-middle px-0" id="setting-btn">
                                 <i class="bi bi-gear-fill"></i> <span class="ms-1 d-none d-sm-inline">Settings</span>
                             </a>
                         </li>
 
                         <li class="nav-item menu-item">
-                            <a href="index.html" class="nav-link align-middle px-0">
-                                <i class="bi bi-box-arrow-left"></i> <span class="ms-1 d-none d-sm-inline">Sign
-                                    out</span>
+                            <a href="index.html" class="nav-link align-middle px-0" id="signout-btn">
+                                <i class="bi bi-box-arrow-left"></i> <span class="ms-1 d-none d-sm-inline">Sign out</span>
                             </a>
                         </li>
 
@@ -83,38 +81,19 @@
             </div>
             <div class="col">
                 <div class="top-bar">
-                    <button type="button" class="btn control-btn px-4 pt-2 pb-2 mt-3 mb-3">
+                    <button type="button" class="btn nav-link control-btn px-2 pt-2 pb-2 mt-3 mb-3" style="display: inline-flex; align-items: center">
                         <i class="bi bi-file-earmark-plus"></i>
-                        <span class="ms-2">ADD EXAM</span>
+                        <span class="ms-1">ADD EXAM</span>
                     </button>
                 </div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Exam</th>
-                            <th scope="col">View exam</th>
-                            <th scope="col">Due date</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Average test time</th>
-                            <th scope="col">Exam control</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Test</th>
-                            <td><button type="button" class="btn control-btn">View Exam</button></td>
-                            <td>29/09/2022</td>
-                            <td>Active</td>
-                            <td> 12 min</td>
-                            <td> <button class="btn control-btn"><i class="bi bi-pencil-fill"></i></button> <button
-                                    class="btn control-btn"><i class="bi bi-trash-fill"></i></button></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div id="workplace">
+                    
+                </div>
+                
             </div>
         </div>
 
     </div>
 </body>
-
+<script src="adminUI.js"></script>
 </html>
