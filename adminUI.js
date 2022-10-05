@@ -112,6 +112,55 @@ document.querySelector('#signout-btn').onclick = function() {
     SIGNOUT();
 }
 
+document.querySelector('#add-button').onclick = function() {
+    const createExamForm = document.createElement('form');
+    const part1 = document.createElement('div');
+
+    const testNameLabel = document.createElement('label');
+    testNameLabel.innerText = 'Test name (ex: Demo Test)';
+    
+    const testNameInput = document.createElement('input');
+    testNameInput.setAttribute('type', 'text');
+    testNameInput.required = true;
+    testNameInput.setAttribute('id', 'test-name');
+
+    part1.appendChild(testNameLabel);
+    part1.appendChild(testNameInput);
+
+    createExamForm.appendChild(part1);
+    
+    const part2 = document.createElement('div');
+
+    const leftPart = document.createElement('div');
+    const passwordLabel = document.createElement('label');
+    passwordLabel.innerText = 'Choose a password';
+    
+    const passwordInput = document.createElement('input');
+    passwordInput.setAttribute('type', 'password');
+    passwordInput.required = true;
+    passwordInput.setAttribute('id', 'test-password');
+    leftPart.appendChild(passwordLabel);
+    leftPart.appendChild(passwordInput);
+
+    const rightPart = document.createElement('div');
+    const confirmPasswordLabel = document.createElement('label');
+    confirmPasswordLabel.innerText = 'Retype your password';
+    
+    const confirmPasswordInput = document.createElement('input');
+    confirmPasswordInput.setAttribute('type', 'password');
+    confirmPasswordInput.required = true;
+    confirmPasswordInput.setAttribute('id', 'confirm-test-password');
+    rightPart.appendChild(confirmPasswordLabel);
+    rightPart.appendChild(confirmPasswordInput);
+
+    part2.appendChild(leftPart);
+    part2.appendChild(rightPart);
+
+    createExamForm.appendChild(part2);
+    document.body.appendChild(createExamForm);
+
+} 
+
 
 
 
