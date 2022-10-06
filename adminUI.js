@@ -117,48 +117,71 @@ document.querySelector('#add-button').onclick = function() {
     const part1 = document.createElement('div');
 
     const testNameLabel = document.createElement('label');
+    testNameLabel.setAttribute('clas', 'form-label')
     testNameLabel.innerText = 'Test name (ex: Demo Test)';
     
     const testNameInput = document.createElement('input');
     testNameInput.setAttribute('type', 'text');
     testNameInput.required = true;
     testNameInput.setAttribute('id', 'test-name');
+    testNameInput.setAttribute('class', 'form-control');
 
     part1.appendChild(testNameLabel);
     part1.appendChild(testNameInput);
 
     createExamForm.appendChild(part1);
     
+    
     const part2 = document.createElement('div');
-
-    const leftPart = document.createElement('div');
     const passwordLabel = document.createElement('label');
     passwordLabel.innerText = 'Choose a password';
+    passwordLabel.setAttribute('class', 'form-label');
     
     const passwordInput = document.createElement('input');
     passwordInput.setAttribute('type', 'password');
     passwordInput.required = true;
     passwordInput.setAttribute('id', 'test-password');
-    leftPart.appendChild(passwordLabel);
-    leftPart.appendChild(passwordInput);
+    passwordInput.setAttribute('class', 'form-control');
+    part2.appendChild(passwordLabel);
+    part2.appendChild(passwordInput);
 
-    const rightPart = document.createElement('div');
+    createExamForm.appendChild(part2);
+
+    const part3 = document.createElement('div');
     const confirmPasswordLabel = document.createElement('label');
     confirmPasswordLabel.innerText = 'Retype your password';
-    
+    confirmPasswordLabel.setAttribute('class', 'form-label');
+
     const confirmPasswordInput = document.createElement('input');
     confirmPasswordInput.setAttribute('type', 'password');
     confirmPasswordInput.required = true;
     confirmPasswordInput.setAttribute('id', 'confirm-test-password');
-    rightPart.appendChild(confirmPasswordLabel);
-    rightPart.appendChild(confirmPasswordInput);
+    confirmPasswordInput.setAttribute('class', 'form-control');
+    part3.appendChild(confirmPasswordLabel);
+    part3.appendChild(confirmPasswordInput);
 
-    part2.appendChild(leftPart);
-    part2.appendChild(rightPart);
+    createExamForm.appendChild(part3);
 
-    createExamForm.appendChild(part2);
+    const submitButton = document.createElement('button');
+    submitButton.setAttribute('type', 'submit');
+    submitButton.innerText = 'Create Test';
+    submitButton.setAttribute('class', 'btn control-btn');
+    submitButton.setAttribute('style', 'margin-top: 2%');
+
+    createExamForm.appendChild(submitButton);
+
     document.body.appendChild(createExamForm);
-
+    createExamForm.setAttribute('z-index', '1000000000');
+    createExamForm.setAttribute('style', `
+    background: #25408f;
+    color: #F7F7F7; 
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1% 1% 1%;
+    text-align: center`);
 } 
 
 
