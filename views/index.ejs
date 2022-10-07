@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="content-text">
+            <h1 class="content-text-heading">Hệ thống kiểm tra online của rabiloo</h1>
+        </div>
+        <div class="admin-login">
+            <button class="btn" style="float: right; background-color: transparent; color: #F7F7F7; border: none; font-size: 0.9rem; margin-right: 5px" onclick=redirect()><i class="bi bi-box-arrow-in-right fa-3x"></i></button>
+        </div>
+    </div>
+    <div id="content">
+        <!-- Background -->
+        <div id="slider">
+            <video id="video_background" autoplay muted loop>
+
+                <source src="img/video-background2.mp4" type="video/mp4" />
+
+            </video>
+        </div>
+        <!-- End Background -->
+
+        <!-- Content text -->
+
+        <!-- End Content text -->
+        <!-- User login form -->
+        <div class="user-login row">
+
+            <input class="id-login col-80" type="text" placeholder="Enter your id">
+            <div></div>
+            <button class="user-login-button">Login</button>
+        </div>
+        <!-- End User login form -->
+    </div>
+    <script>
+        function redirect() {
+            window.location.assign(window.location.href + "login");
+        }
+    </script>
+</body>
+
+</html>
