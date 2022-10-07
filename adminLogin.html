@@ -12,19 +12,44 @@
 <body>
     <div id="content">
         <div id="login-content">
-            <h2> Sign in</h2>
-            <form action="">
-                <label for="admin-acc">First name:</label><br>
-                <input class="acc-form"type="text" id="admin-acc" name="admin-acc" 
-                value="" placeholder="Please enter your username"><br>
-                <label for="admin-password">Last name:</label><br>
-                <input class="pass-form" type="text" id="admin-password" name="admin-password" 
-                value="" placeholder="Please enter your password"><br><br>
-                <input type="submit" value="Submit">
+            <h2 class = "log"> Sign in</h2>
+            <form name ="f1"action = "" onsubmit = "return validation()" method = "POST" class="sign-in-form">
+                <label class = "form-label" for="admin-acc">First name:</label><br>
+                <input class="acc-form" type="text" id="admin-acc" name="admin-acc"
+                value="" placeholder="Please enter your username"  required ><br>
+                <label class = "form-label" for="admin-password">Last name:</label><br>
+                <input class="pass-form" type="text" id="admin-password" name="admin-password"
+                value="" placeholder="Please enter your password" required><br><br>
+                <input class="submit" type="submit" value="Sign in">
             </form> 
         </div>
     </div>
 
 </body>
+
+<script src="./assets/js/adminLogin.js"></script>
+<script>  
+  function validation()  
+  {  
+      var id=document.f1.admin-acc.value ;  
+      var ps=document.f1.admin-password.value ;  
+      if(id.length=="" && ps.length=="") {  
+          alert("Email and Password fields are empty");  
+          return false;  
+      }  
+      else  
+      {  
+          if(id.length=="") {  
+              alert("Email is empty");  
+              return false;  
+          }   
+          if (ps.length=="") {  
+          alert("Password field is empty");  
+          return false;  
+          }  
+      }                             
+  }  
+</script> 
+ 
 
 </html>
