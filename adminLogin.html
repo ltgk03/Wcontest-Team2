@@ -14,14 +14,14 @@
         <div id="content">
             <div id="login-content">
                 <h2 class = "log"> Sign in</h2>
-                <form name ="f1" action = "" onsubmit = "" method = "POST" class="sign-in-form">
-                    <div class="s1"><label class = "form-label s1" for="admin-acc">First name:</label><br></div>
+                <form name ="f1" action = ""  method = "POST" onsubmit="" class="sign-in-form">
+                    <div class="s1"><label class = "form-label s1" for="admin-acc">Username:</label><br></div>
                     <input class="acc-form" type="text" id="admin-acc" name="admin-acc"
                     value="" placeholder="Please enter your username"  required ><br>
-                    <div class="s2"><label class = "form-label" for="admin-password">Last name:</label><br></div>
+                    <div class="s2"><label class = "form-label" for="admin-password">Password:</label><br></div>
                     <input class="pass-form" type="text" id="admin-password" name="admin-password"
                     value="" placeholder="Please enter your password" required><br><br>
-                    <input class="submit" type="submit" value="Sign in" onclick="">
+                    <input class="submit" type="submit" value="Sign in" onclick="reDirect()">
                 </form> 
     
                 <div class="need-help">Need help?</div>
@@ -34,25 +34,9 @@
 
 <script src="./assets/js/adminLogin.js"></script>
 <script>  
-  function validation()  
+  function reDirect()  
   {  
-      var id=document.f1.admin-acc.value ;  
-      var ps=document.f1.admin-password.value ;  
-      if(id.length=="" && ps.length=="") {  
-          alert("Email and Password fields are empty");  
-          return false;  
-      }  
-      else  
-      {  
-          if(id.length=="") {  
-              alert("Email is empty");  
-              return false;  
-          }   
-          if (ps.length=="") {  
-          alert("Password field is empty");  
-          return false;  
-          }  
-      }                             
+     
   }  
 </script> 
  
