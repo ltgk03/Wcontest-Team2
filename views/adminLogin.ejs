@@ -5,26 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/adminLogin.css">
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/adminLogin.css">
 </head>
 
 <body>
-    <div id="content">
-        <div id="login-content">
-            <h2> Sign in</h2>
-            <form action="">
-                <label for="admin-acc">First name:</label><br>
-                <input class="acc-form"type="text" id="admin-acc" name="admin-acc" 
-                value="" placeholder="Please enter your username"><br>
-                <label for="admin-password">Last name:</label><br>
-                <input class="pass-form" type="text" id="admin-password" name="admin-password" 
-                value="" placeholder="Please enter your password"><br><br>
-                <input type="submit" value="Submit">
-            </form> 
+    <div class="all">
+        <div id="content">
+            <div id="login-content">
+                <h2 class = "log"> Sign in</h2>
+                <form name ="f1" action = ""  method = "POST" onsubmit="" class="sign-in-form">
+                    <div class="s1"><label class = "form-label s1" for="admin-acc">Username:</label><br></div>
+                    <input class="acc-form" type="text" id="admin-acc" name="admin-acc"
+                    value="" placeholder="Please enter your username"  required ><br>
+                    <div class="s2"><label class = "form-label" for="admin-password">Password:</label><br></div>
+                    <input class="pass-form" type="text" id="admin-password" name="admin-password"
+                    value="" placeholder="Please enter your password" required><br><br>
+                    <input class="submit" type="submit" value="Sign in" onclick="reDirect()">
+                </form> 
+    
+                <div class="need-help">Need help?</div>
+            </div>
         </div>
     </div>
+    
 
 </body>
+
+<script src="js/adminLogin.js"></script>
+<script>  
+  function reDirect()  
+  {  
+     
+  }  
+</script> 
+ 
 
 </html>

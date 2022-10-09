@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const port = 3000;
- var isAdmin = false;
+var isAdmin = false;
 
 //Static Files
 
@@ -16,6 +16,8 @@ app.use('img', express.static(__dirname + 'public/img'));
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
+
+// API
 app.get('/', (req, res) => {
     res.render('index');
 });
@@ -31,6 +33,9 @@ app.get('/login', (req, res) => {
     res.render('adminLogin');
 });
 
-
 app.listen(port, () => console.info(`Listening on port: ${port}`));
+
+
+
+
 
