@@ -1,6 +1,6 @@
 const express = require('express');
 const mysql = require('mysql');
-const helper = require('./helper');
+
 const app = express();
 
 var port = 3000;
