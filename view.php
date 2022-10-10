@@ -64,6 +64,7 @@ $result = $conn->query($sql);
     </div>
 
     <a href="create.php">thêm câu hỏi</a>
+    <a href="adminUI.php">quay về</a>
 </body>
 
 </html>
