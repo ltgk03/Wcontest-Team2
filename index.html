@@ -72,13 +72,24 @@
 
         <!-- End Content text -->
         <!-- User login form -->
-        <div class="user-login">
+        <!-- <div class="user-login">
 
             <input class="id-login col-80" type="text" placeholder="Enter your id">
             <div></div>
             <button class="user-login-button">Login</button>
             <div class="clear"></div>
-        </div>
+        </div> -->
+        <form action="userLogin.php" method="post" class="user-login">
+            <div class = "user-id">
+                <input class="id-login col-80" type="text" placeholder="Enter your id" name="userId">
+            </div>
+            
+            <br>
+            <div class = "user-id">
+                <button class="user-login-button" type="submit">Login</button>
+            </div>
+            
+        </form>
 
 
         <!-- End User login form -->
