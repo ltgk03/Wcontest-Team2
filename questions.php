@@ -22,19 +22,23 @@ $result = $conn->query($sql);
         <form action = "" method = "POST">
             <?php
             if ($result->num_rows > 0) {
+                $dem = 0;
                 while ($row = $result->fetch_assoc()) {
             ?>
+                <form>
                     <div class = "question_section">
                         <div class = "question"><?php echo $row['quest']; ?></div>
                         <div class = "answers">
-                            <input type="radio" name="ans" value="answer1"><?php echo $row['answer1']; ?><br>
-                            <input type="radio" name="ans" value="answer2"><?php echo $row['answer2']; ?><br>
-                            <input type="radio" name="ans" value="answer3"><?php echo $row['answer3']; ?><br>
-                            <input type="radio" name="ans" value="answer4"><?php echo $row['answer4']; ?><br>
+                            <input type="radio" name="ans" value="answer1"><?php $dem++; echo " ".$dem.". ".$row['answer1']; ?><br>
+                            <input type="radio" name="ans" value="answer2"><?php $dem++; echo " ".$dem.". ".$row['answer2']; ?><br>
+                            <input type="radio" name="ans" value="answer3"><?php $dem++; echo " ".$dem.". ".$row['answer3']; ?><br>
+                            <input type="radio" name="ans" value="answer4"><?php $dem++; echo " ".$dem.". ".$row['answer4']; ?><br>
                         </div>
                         
                     </div>
+                </form>
             <?php
+                $dem = 0;
                 }
             }
             ?>
