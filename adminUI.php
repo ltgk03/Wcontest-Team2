@@ -60,7 +60,7 @@
                         </li>
 
                         <li class="nav-item menu-item">
-                            <a href="index.html" class="nav-link align-middle px-0" id="signout-btn">
+                            <a href="index.php" class="nav-link align-middle px-0" id="signout-btn">
                                 <i class="bi bi-box-arrow-left"></i> <span class="ms-1 d-none d-sm-inline">Sign out</span>
                             </a>
                         </li>
