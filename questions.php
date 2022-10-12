@@ -21,13 +21,15 @@ $result = $conn->query($sql);
         <h2>Questions</h2>
         <form action = "" method = "POST">
             <?php
+            
             if ($result->num_rows > 0) {
                 $dem = 0;
+                $demq = 0;
                 while ($row = $result->fetch_assoc()) {
             ?>
                 <form>
                     <div class = "question_section">
-                        <div class = "question"><?php echo $row['quest']; ?></div>
+                        <div class = "question"><?php $demp++; echo " ".$demp.". ". $row['quest']; ?></div>
                         <div class = "answers">
                             <input type="radio" name="ans" value="answer1"><?php $dem++; echo " ".$dem.". ".$row['answer1']; ?><br>
                             <input type="radio" name="ans" value="answer2"><?php $dem++; echo " ".$dem.". ".$row['answer2']; ?><br>
@@ -44,6 +46,7 @@ $result = $conn->query($sql);
             ?>
             <button type = "submit" class = "btn btn-info"> Submit </button>
         </form>
+        <a href="index.php">quay ve</a>
     </div>
 </body>
 </html>
