@@ -8,7 +8,6 @@ const ALLEXAM = () => {
                        + '<th scope="col">View exam</th>'
                        + '<th scope="col">Due date</th>'
                        + '<th scope="col">Status</th>'
-                       + '<th scope="col">Average test time</th>'
                        + '<th scope="col">Exam control</th>';
     thead.appendChild(titlerow);
     table.appendChild(thead);               

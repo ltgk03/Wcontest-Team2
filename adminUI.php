@@ -23,10 +23,9 @@
 
 <body>
     <div class="container-fluid">
-
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 nav-column">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-1 pt-2 min-vh-100">
                     <a href="https://rabiloo.com/vi"
                         class="d-flex align-items-center pb-3 mb-md-0 me-md-auto navbar-brand">
                         <span class="fs-5 d-none d-sm-inline">
@@ -66,12 +65,10 @@
                         </li>
 
                     </ul>
-                    <hr>
+                  
                     <div class="pb-4">
                         <a href="#" class="d-flex align-items-center text-decoration-none">
-                            <img src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE="
-                                alt="HumanImage" width="50" height="50" class="rounded-circle">
-                            <span class="d-none d-sm-inline mx-1 administrator">ADMIN</span>
+                        <i class="bi bi-person-circle"></i><span class="d-none d-sm-inline mx-1 administrator">ADMIN</span>
                         </a>
                     </div>
                 </div>
@@ -81,7 +78,7 @@
                 <div class="top-bar">
                     <button type="button" class="btn nav-link control-btn px-2 pt-2 pb-2 mt-3 mb-3" style="display: inline-flex; align-items: center" id="add-button">
                         <i class="bi bi-file-earmark-plus"></i>
-                        <span class="ms-1"><a href="view.php">ADD EXAM</a></span>
+                        <span class="ms-1"><a href="view.php" style="text-decoration: none">ADD EXAM</a></span>
                     </button>
                 </div>
                 <div id="workplace">
