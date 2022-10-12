@@ -78,7 +78,7 @@
                 <div class="top-bar">
                     <button type="button" class="btn nav-link control-btn px-2 pt-2 pb-2 mt-3 mb-3" style="display: inline-flex; align-items: center" id="add-button">
                         <i class="bi bi-file-earmark-plus"></i>
-                        <span class="ms-1"><a href="view.php" style="text-decoration: none">ADD EXAM</a></span>
+                        <span class="ms-1">ADD EXAM</span>
                     </button>
                 </div>
                 <div id="workplace">
