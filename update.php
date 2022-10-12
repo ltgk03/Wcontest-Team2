@@ -15,7 +15,7 @@ if (isset($_POST['update'])) {
     $result = $conn->query($sql);
 
     if ($result == TRUE) {
-        echo "Record Updated Succesfully";
+        echo "<p>Record Updated Succesfully!</p>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -47,37 +47,37 @@ if (isset($_GET['id'])) {
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+            <link rel="stylesheet" href="./assets/css/update.css">
         </head>
 
         <body>
-            <h2>update form</h2>
+            <h2 class = "update_form">Update form</h2>
             <form action="" method="POST">
-                <fieldset>
-                    <legend>Update Question</legend>
+                <fieldset class = "Fieldset">
+                    <legend class = "Legend" >Update Question</legend>
                     Question:<br>
                     <input type="text" name="quest">
                     <br>
-                    answer1:<br>
+                    Answer1:<br>
                     <input type="text" name="answer1">
                     <br>
-                    answer2:<br>
+                    Answer2:<br>
                     <input type="text" name="answer2">
                     <br>
-                    answer3:<br>
+                    Answer3:<br>
                     <input type="text" name="answer3">
                     <br>
-                    answer4:<br>
+                    Answer4:<br>
                     <input type="text" name="answer4">
                     <br>
-                    ranswer:<br>
+                    Ranswer:<br>
                     <input type="text" name="ranswer">
                     <br>
-                    <input type="submit" name="update" value="update">
+                    <input class = "button" type="submit" name="update" value="Update">
                 </fieldset>
             </form>
 
-            <a href="view.php">xem cơ sở dữ liệu</a>
+            <a class = "link" href="view.php">Xem cơ sở dữ liệu.</a>
         </body>
 
         </html>
