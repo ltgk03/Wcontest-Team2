@@ -146,13 +146,14 @@ document.querySelector('#signout-btn').onclick = function() {
     SIGNOUT();
 }
 
-/*
+
 document.querySelector('#add-button').onclick = function() {
     const createExamForm = document.createElement('form');
+    createExamForm.setAttribute('action', '');
     const part1 = document.createElement('div');
 
     const testNameLabel = document.createElement('label');
-    testNameLabel.setAttribute('clas', 'form-label')
+    testNameLabel.setAttribute('class', 'form-label');
     testNameLabel.innerText = 'Test name (ex: Demo Test)';
     
     const testNameInput = document.createElement('input');
@@ -199,13 +200,14 @@ document.querySelector('#add-button').onclick = function() {
 
     const submitButton = document.createElement('button');
     submitButton.setAttribute('type', 'submit');
+    submitButton.setAttribute('onClick', 'closeAddExam()');
     submitButton.innerText = 'Create Test';
     submitButton.setAttribute('class', 'btn control-btn');
     submitButton.setAttribute('style', 'margin-top: 2%');
 
     createExamForm.appendChild(submitButton);
 
-    document.body.appendChild(createExamForm);
+    document.getElementById('addExamForm').appendChild(createExamForm);
     createExamForm.setAttribute('z-index', '1000000000');
     createExamForm.setAttribute('style', `
     background: #25408f;
@@ -219,4 +221,6 @@ document.querySelector('#add-button').onclick = function() {
     text-align: center`);
 } 
 
-*/
+function closeAddExam() {
+    document.getElementById("addExamForm").innerHTML = "";
+}

@@ -29,8 +29,9 @@ echo "</th>";
 echo "</tr></thead>";
 
 if ($result->num_rows > 0) {
-    echo "<thead><tr>";
+    echo "<thead>";
     while ($row = $result->fetch_assoc()) {
+        echo "<tr>";
         echo "<th scope = \"col\" >";
         echo $row['examid'];
         echo "</th>";
@@ -50,6 +51,8 @@ if ($result->num_rows > 0) {
         echo "<th scope = \"col\" >";
         echo $row['examaveragetime'];
         echo "</th>";
+
+        echo "</tr>";
     }
     echo "</tr></thead>";
     
