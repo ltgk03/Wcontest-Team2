@@ -8,7 +8,6 @@ const ALLEXAM = () => {
                        + '<th scope="col">View exam</th>'
                        + '<th scope="col">Due date</th>'
                        + '<th scope="col">Status</th>'
-                       + '<th scope="col">Average test time</th>'
                        + '<th scope="col">Exam control</th>';
     thead.appendChild(titlerow);
     table.appendChild(thead);               
@@ -117,8 +116,8 @@ document.querySelector('#add-button').onclick = function() {
     const part1 = document.createElement('div');
 
     const testNameLabel = document.createElement('label');
-    testNameLabel.setAttribute('clas', 'form-label')
-    testNameLabel.innerText = 'Test name (ex: Demo Test)';
+    testNameLabel.setAttribute('clas', 'form-label');
+    testNameLabel.innerText = 'Exam name (ex: Demo Exam)';
     
     const testNameInput = document.createElement('input');
     testNameInput.setAttribute('type', 'text');
@@ -134,7 +133,7 @@ document.querySelector('#add-button').onclick = function() {
     
     const part2 = document.createElement('div');
     const passwordLabel = document.createElement('label');
-    passwordLabel.innerText = 'Choose a password';
+    passwordLabel.innerText = 'Choose an ID';
     passwordLabel.setAttribute('class', 'form-label');
     
     const passwordInput = document.createElement('input');
@@ -149,7 +148,7 @@ document.querySelector('#add-button').onclick = function() {
 
     const part3 = document.createElement('div');
     const confirmPasswordLabel = document.createElement('label');
-    confirmPasswordLabel.innerText = 'Retype your password';
+    confirmPasswordLabel.innerText = 'Retype your ID';
     confirmPasswordLabel.setAttribute('class', 'form-label');
 
     const confirmPasswordInput = document.createElement('input');
@@ -164,7 +163,7 @@ document.querySelector('#add-button').onclick = function() {
 
     const submitButton = document.createElement('button');
     submitButton.setAttribute('type', 'submit');
-    submitButton.innerText = 'Create Test';
+    submitButton.innerText = 'Create Exam';
     submitButton.setAttribute('class', 'btn control-btn');
     submitButton.setAttribute('style', 'margin-top: 2%');
 

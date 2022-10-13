@@ -70,8 +70,11 @@ if (isset($_GET['id'])) {
                     Answer4:<br>
                     <input type="text" name="answer4">
                     <br>
-                    Ranswer:<br>
-                    <input type="text" name="ranswer">
+                    ranswer:<br>
+                    <input type="radio" name="ranswer" value="answer1">answer1
+                    <input type="radio" name="ranswer" value="answer2">answer2
+                    <input type="radio" name="ranswer" value="answer3">answer3
+                    <input type="radio" name="ranswer" value="answer4">answer4
                     <br>
                     <input class = "button" type="submit" name="update" value="Update">
                 </fieldset>

@@ -31,7 +31,10 @@
             <input type="text" name="answer4">
             <br>
             ranswer:<br>
-            <input type="text" name="ranswer">
+            <input type="radio" name="ranswer" value="answer1">answer1
+            <input type="radio" name="ranswer" value="answer2">answer2
+            <input type="radio" name="ranswer" value="answer3">answer3
+            <input type="radio" name="ranswer" value="answer4">answer4
             <br>
             <input type="submit" name="submit" value="submit">
         </fieldset>

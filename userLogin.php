@@ -1,20 +1,29 @@
 <?php
-include "config.php";
-if (isset($_POST['submit'])) {
-    $user = $_POST['userId'];
+    include "config.php";
+    session_start();
+    if(isset($_POST['userId'])) {
+        $userId = $_POST['userId'];
+        $sql = "SELECT userId FROM usergrade WHERE userId = '$userId'";
+        $result = mysqli_query($conn,$sql);
+        if(mysqli_num_rows($result) === 1) {
+            $row = mysqli_fetch_assoc($result);
+            if ($row['userId'] === $userId) {
+            echo "Logged in";
+            $_SESSION['userId'] = $_POST['userId'];
+            header("Location: questions.php");
+            exit();
+            } else {
+                header("Location: index.php?error=Invalid ID");
+            }
 
-    $sql = "INSERT INTO question(quest,answer1,answer2,answer3,answer4,ranswer) VALUES ('$quest','$answer1','$answer2','$answer3','$answer4','$ranswer')";
-
-$result = $conn->query($sql);
-
-if ($result == TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-
-$conn->close();
-}
-
-?>
+        } else {
+            header("Location: index.php?error=Invalid ID");
+        }
+    
+    
+    
+    
+    
+    
+    
+    }

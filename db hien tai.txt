@@ -1,0 +1,11 @@
+database: qrabiloo
+table: question -> col: id int primary a_i
+				quest text
+				answer1 text
+				answer2 text
+				answer3 text
+				answer4 text
+				ranswer text
+table: adminn -> col: id int primary a_i
+				adminAcc text
+				adminPass text
