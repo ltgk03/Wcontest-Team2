@@ -39,7 +39,7 @@
       <?php } ?>
       <div style="display: flex; justify-content: center">
         <button class="user-login-button" type="submit">
-          <a href="questions.php">Login</a>
+          Login
         </button>
       </div>
     </fieldset>
