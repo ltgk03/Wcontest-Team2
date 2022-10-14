@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,6 +85,10 @@
         $('#btnFinish').show();
     });
     var questions;
+    let index = 1;
+    function sum(a, b){
+    return a + b;
+}
     $('#btnFinish').click(function(){
         $(this).hide();
         $('#btnStart').show();
@@ -106,35 +109,35 @@
 
             //Bước 2: lấy từ người dùng
             let da = $(v).find('fieldset input[type = "radio"]:checked').attr('class');
-            console.log(da);
+            //da: đáp án của người dùng
             let choice = '';
             switch (da) {
                 case 'rdOptionA':
                     choice = "answer1";
-                    console.log(choice);
                 break;
                 case 'rdOptionB':
                     choice = "answer2";
-                    console.log(choice);
+                    
                 break;
                 case 'rdOptionC':
                     choice = "answer3";
-                    console.log(choice);
                 break;
                 case 'rdOptionD':
                     choice = "answer4";
-                    console.log(choice);
                 break;
             }
             if (choice == answer) {
-                console.log('Câu có id' + id + 'đúng');
                 mark++;
             } else {
-                console.log('Câu có id' + id + 'sai');
             }
+             // Bước 3: đánh dấu câu hỏi nào đúng, câu nào sai
+        
+        $('#question_'+id+' >fieldset>div>label.'+answer).css('background-color','yellow');
         });
-        console.log('Điểm của bạn là: ' + mark);
-        $('#mark').text('Điểm của bạn là: ' + mark)
+        console.log('Điểm của bạn là: ' + mark + '/' + sum(index,-1));
+        $('#mark').text('Điểm của bạn là: ' + mark + '/' + sum(index,-1));
+       
+        
     };
 
 
@@ -150,25 +153,25 @@
             success: function(data) {
                 questions = jQuery.parseJSON( data);
                 
-                let index = 1;
+                index = 1;
                 let d  = '';
                 $.each(questions,function(k,v) {
                   
                     
-            d +=        '<div class="row" style="margin-left:10px;">';
+            d +=        '<div class="row" style="margin-left:10px;" id = "question_' + v['id']+'"> ';
             d +=        '<h5 style="font-weight:bold;" id ='+v['id']+'> <span class = "text-danger">Câu ' + index +': </span>' + v['quest'] +'</h5>';
             d +=         '<fieldset id = "group'+index+'">';
             d +=        '<div class="radio col-md-12">';
-            d +=        '    <label><input type="radio" class="rdOptionA" name = "group'+index+'"><span class = "text-danger">A: </span> '+v['answer1']+' </label>';
+            d +=        '    <label  class = "answer1"><input type="radio" class="rdOptionA" name = "group'+index+'"><span class = "text-danger">A: </span> '+v['answer1']+' </label>';
             d +=        '</div>';
             d +=        '<div class="radio col-md-12">';
-            d +=        '    <label><input type="radio" class="rdOptionB" name = "group'+index+'"><span class = "text-danger">B: </span> '+v['answer2']+'</label>';
+            d +=        '    <label class = "answer2"><input type="radio" class="rdOptionB" name = "group'+index+'"><span class = "text-danger">B: </span> '+v['answer2']+'</label>';
             d +=        '</div>';
             d +=        '<div class="radio col-md-12">';
-            d +=        '    <label><input type="radio" class="rdOptionC" name = "group'+index+'"><span class = "text-danger">C: </span> '+v['answer3']+'</label>';
+            d +=        '    <label class = "answer3"><input type="radio" class="rdOptionC" name = "group'+index+'"><span class = "text-danger">C: </span> '+v['answer3']+'</label>';
             d +=        '</div>';
             d +=        '<div class="radio col-md-12">';
-            d +=        '    <label><input type="radio" class="rdOptionD" name = "group'+index+'"><span class = "text-danger">D: </span> '+v['answer4']+'</label>';
+            d +=        '    <label class = "answer4"><input type="radio" class="rdOptionD" name = "group'+index+'"><span class = "text-danger">D: </span> '+v['answer4']+'</label>';
             d +=        '</div>';
             d +=         '</fieldset>';
             d +=        '</div>';
