@@ -1,10 +1,28 @@
+body {
+    height: 100vh;
+    width: 100wh;
+    background: url("../background-img/view.jpg") no-repeat top left 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ctable tbody tr td {
+    word-wrap: break-word;
+    word-break: break-all;  
+    white-space: normal !important;
+    text-align: justify;
+    vertical-align: middle;
+}
 .ctable {
-    table-layout: fixed;
     text-align: center;
+    background-color: #3cb4e7;
+    color: black;
+    border-radius: 10px;
+
 }
-.ctable td {
- /* max-width: 100px; */
- overflow: hidden;
- text-overflow: ellipsis;
- white-space: nowrap;
+
+a {
+    text-decoration: none;
 }
+

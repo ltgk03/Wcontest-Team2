@@ -4,7 +4,7 @@
 }
 body {
     height: 100vh;
-    background: url("../background-img/computer-background.jpg") no-repeat top center;
+    background: url("/assets/background-img/banner.jpg") no-repeat top center;
 }
 
 .row {
