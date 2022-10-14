@@ -4,6 +4,7 @@ const ALLEXAM = () => {
     table.setAttribute('class', 'table');
     const thead = document.createElement('thead');
     const titlerow = document.createElement('tr');
+<<<<<<< HEAD
     titlerow.innerHTML = '<th scope="col">Exam ID</th>'
                        + '<th scope="col">Exam name</th>'
                        + '<th scope="col">Due date</th>'
@@ -79,8 +80,7 @@ const RESULT = () => {
                        + '<th scope="col">Due date</th>'
                        + '<th scope="col">Result</th>'
     thead.appendChild(titlerow);
-    table.appendChild(thead);
-    thead = document.createElement('thead');
+    table.appendChild(thead);               
                             
     const tbody = document.createElement('tbody');
 
@@ -121,6 +121,7 @@ const SIGNOUT = () => {
 
 }
 
+<<<<<<< HEAD
 // ALLEXAM();
 // updateAllExam();
 document.querySelector('#allexam-btn').onclick = function() {
@@ -145,7 +146,6 @@ document.querySelector('#signout-btn').onclick = function() {
     currentState = 'Sign out';
     SIGNOUT();
 }
-
 
 document.querySelector('#add-button').onclick = function() {
     const createExamForm = document.createElement('form');

@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="./assets/css/create.css">
 </head>
 
 <body>
@@ -15,25 +16,51 @@
     <form action="" method="POST">
         <fieldset>
             <legend>Insert Question</legend>
-            Question:<br>
-            <input type="text" name="quest">
-            <br>
-            answer1:<br>
-            <input type="text" name="answer1">
-            <br>
-            answer2:<br>
-            <input type="text" name="answer2">
-            <br>
-            answer3:<br>
-            <input type="text" name="answer3">
-            <br>
-            answer4:<br>
-            <input type="text" name="answer4">
-            <br>
-            ranswer:<br>
-            <input type="text" name="ranswer">
-            <br>
-            <input type="submit" name="submit" value="submit">
+            <div class="form-group">
+                <label class="control-label col-sm-2">Question </label>
+                <div class="col-sm-10">
+                    <input type="text" name="quest" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Answer 1</label>
+                <div class="col-sm-10">
+                    <input type="text" name="answer1" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Answer 2</label>
+                <div class="col-sm-10">
+                    <input type="text" name="answer2" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Answer 3</label>
+                <div class="col-sm-10">
+                    <input type="text" name="answer3" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Answer 4</label>
+                <div class="col-sm-10">
+                    <input type="text" name="answer4" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Right answer</label>
+                <div id="ratio-question" class="ratio col-sm-10">
+                    <input type="radio" name="ranswer" value="answer1">answer1
+                    <input type="radio" name="ranswer" value="answer2">answer2
+                    <input type="radio" name="ranswer" value="answer3">answer3
+                    <input type="radio" name="ranswer" value="answer4">answer4
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-sm-2">
+                    <span class="glyphicon glyphicon-print"></span>    
+                    <input type="submit" name="submit" value="submit">
+                </div>
+            </div>
         </fieldset>
     </form>
 
