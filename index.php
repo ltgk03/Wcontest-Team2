@@ -35,12 +35,10 @@
         <input class="id-login" type="text" placeholder="Enter test id" name="userId">
       </div>
       <?php if (isset($_GET['error'])) { ?>
-        <p class="error"><?php echo $_GET['error']; ?></p>
+        <p id="invalid" style="text-align: center; color: red; padding-top: 1%; margin: 0; font-size: 1.2rem"><?php echo $_GET['error']; ?></p>
       <?php } ?>
       <div style="display: flex; justify-content: center">
-        <button class="user-login-button" type="submit">
-          <a href="questions.php">Login</a>
-        </button>
+        <button class="user-login-button" type="submit">Login</button>
       </div>
     </fieldset>
 
