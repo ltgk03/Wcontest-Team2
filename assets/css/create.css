@@ -1,0 +1,10 @@
+.form-group {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+input {
+    border: inset;
+    border-radius: 4px;
+}
