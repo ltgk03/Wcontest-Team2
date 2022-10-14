@@ -87,7 +87,7 @@ $result = $conn->query($sql);
                 </tr>
             </thead>
             <tbody>
-            
+
             </tbody>
         </table>
     </div>
