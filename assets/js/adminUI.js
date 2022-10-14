@@ -4,7 +4,6 @@ const ALLEXAM = () => {
     table.setAttribute('class', 'table');
     const thead = document.createElement('thead');
     const titlerow = document.createElement('tr');
-<<<<<<< HEAD
     titlerow.innerHTML = '<th scope="col">Exam ID</th>'
                        + '<th scope="col">Exam name</th>'
                        + '<th scope="col">Due date</th>'
@@ -121,7 +120,7 @@ const SIGNOUT = () => {
 
 }
 
-<<<<<<< HEAD
+
 // ALLEXAM();
 // updateAllExam();
 document.querySelector('#allexam-btn').onclick = function() {
