@@ -27,20 +27,88 @@ body {
   font-weight: bold;
 }
 
-.xemcsdl {
-    font-size: 25;
+/* .link {
     position: relative;
-    left: 90%;
-    top: 50px;
+    left: 20px;
+    font-size: 40;
+    top: 30px;
+} */
+a[type = button] {
+    font-size :10; 
+    background-color: #1E90FF;
+    border: none;
+    color: black;
+     padding: 12px 12px;
+    text-decoration: none;
+    position: relative;
+    top: 5%;
+    left: 10%;
+    margin: 30px 2px;
 }
 .update_form{
     text-align: left;
     text-decoration: null;
     font-size: 30;
 }
-.button{
-    font-size: 30;
-    text-align: left;
-    margin-left: 90%;
-    font-style: arial;
+input[type = submit] {
+    position: relative;
+    left: 90%;
+    bottom: 5%;
+    font-size :10; 
+    background-color: #1E90FF;
+    border: none;
+    color:black;
+     padding: 12px 12px;
+    text-decoration: none;
+    margin: 30px 2px;
 }
+p[type = mess]{
+    text-align: center;
+    color: red;
+    position: relative;
+    top: 70px;
+}
+#quest{
+	width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px black #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+input[type = text] {
+    width: 100%;
+   	padding: 5px 5px;
+   	margin: 4px 0;
+    box-sizing: border-box;
+}
+textarea[type = text] {
+	 width: 100%;
+   	padding: 5px 5px;
+   	margin: 4px 0;
+    box-sizing: border-box;
+}
+textarea[type=text]:focus {
+  background-color: #cbcbcb;
+}
+input[type=text]:focus {
+  background-color: #cbcbcb;
+}
+.parent {
+  display: flex;
+  width: 100%;
+}
+
+.child {
+  flex: 1;
+  margin: 10px;
+}
+
+.child:first-child {
+  margin-right: 50px;
+}
+input[type  = radio] {
+    margin-left: 3%;
+}
+
