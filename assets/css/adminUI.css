@@ -1,4 +1,3 @@
-
 body {
     min-width:360px;        /* Suppose you want minimum width of 1000px */
     width: auto !important;  /* Firefox will set width as auto */
@@ -16,12 +15,10 @@ body {
 .nav-column {
     background-color:  #25408f;
 }
-
 .menu-item {
     margin-top: 5%;
     margin-bottom: 5%;
 }
-
 .top-bar {
     background-color: #25408f;
     height: 8%;
@@ -37,17 +34,12 @@ body {
     border-radius: 20px;
     font-size: 0.9rem;
 }
-
 .top-bar .control-btn:hover {
     background-color: white;  
     color: #FFC258;
     border: none;
 }
-
 .top-bar .control-btn {
     margin-left: 10px;
     text-align: center;
 }
-
-
-

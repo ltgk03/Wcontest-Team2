@@ -4,32 +4,14 @@ const ALLEXAM = () => {
     table.setAttribute('class', 'table');
     const thead = document.createElement('thead');
     const titlerow = document.createElement('tr');
-<<<<<<< HEAD
-    titlerow.innerHTML = '<th scope="col">Exam ID</th>'
-                       + '<th scope="col">Exam name</th>'
+    titlerow.innerHTML = '<th scope="col">Exam</th>'
+                       + '<th scope="col">View exam</th>'
                        + '<th scope="col">Due date</th>'
                        + '<th scope="col">Status</th>'
-                       + '<th scope="col">Average test time</th>';
+                       + '<th scope="col">Average test time</th>'
+                       + '<th scope="col">Exam control</th>';
     thead.appendChild(titlerow);
-    // table.appendChild(thead);
-    // var x = document.getElementById("item-workspace");
-    // titlerow.innerHTML = "<?php"
-    // + "$result = $conn->query($sql);"
-    // + "if ($result->num_rows > 0) {"
-    //     + "$dem = 0;"
-    //     + "while ($row = $result->fetch_assoc()) {"
-    // + "?>"
-    //     + "<tr>"
-    //         + "<th scope = \"col\" > <?php echo $row['examid'] ?> </th>"
-    //         + "<th scope = \"col\" > <?php echo $row['examname'] ?> </th>"
-    //         + "<th scope = \"col\" > <?php echo $row['examdate'] ?> </th>"
-    //         + "<th scope = \"col\" > <?php echo $row['examstatus'] ?> </th>"
-    //         + "<th scope = \"col\" > <?php echo $row['examaveragetime'] ?> </th>"
-    //     + "</tr>"
-    // + "<?php"
-    //     + "$dem = 0; }} ?>";
-    thead.appendChild(titlerow);
-    table.appendChild(thead);
+    table.appendChild(thead);               
                             
     const tbody = document.createElement('tbody');
 
@@ -57,19 +39,6 @@ const ALLEXAM = () => {
     }
     workplace.appendChild(table);
 }
-
-
-function updateAllExam() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("item-workspace").innerHTML = this.responseText;
-        }
-    };        
-    xhttp.open("GET", "allExams.php", true);
-    xhttp.send();
-}
-
 
 const RESULT = () => {
     const table = document.createElement('table');
@@ -121,14 +90,10 @@ const SIGNOUT = () => {
 
 }
 
-<<<<<<< HEAD
-// ALLEXAM();
-// updateAllExam();
+ALLEXAM();
 document.querySelector('#allexam-btn').onclick = function() {
     currentState = 'All exam';
-    // ALLEXAM();
-    updateAllExam();
-    // $("div").load('allExams.php');
+    ALLEXAM();
 }
 document.querySelector('#result-btn').onclick = function() {
     currentState = 'Results';
@@ -149,11 +114,11 @@ document.querySelector('#signout-btn').onclick = function() {
 
 document.querySelector('#add-button').onclick = function() {
     const createExamForm = document.createElement('form');
-    createExamForm.setAttribute('action', '');
+    createExamForm.setAttribute('action','addExam.php');
     const part1 = document.createElement('div');
 
     const testNameLabel = document.createElement('label');
-    testNameLabel.setAttribute('class', 'form-label');
+    testNameLabel.setAttribute('class', 'form-label')
     testNameLabel.innerText = 'Test name (ex: Demo Test)';
     
     const testNameInput = document.createElement('input');
@@ -170,44 +135,43 @@ document.querySelector('#add-button').onclick = function() {
     
     const part2 = document.createElement('div');
     const passwordLabel = document.createElement('label');
-    passwordLabel.innerText = 'Choose a date';
+    passwordLabel.innerText = 'Choose a password';
     passwordLabel.setAttribute('class', 'form-label');
     
     const passwordInput = document.createElement('input');
-    passwordInput.setAttribute('type', 'date');
+    passwordInput.setAttribute('type', 'password');
     passwordInput.required = true;
-    passwordInput.setAttribute('id', 'test-date');
+    passwordInput.setAttribute('id', 'test-password');
     passwordInput.setAttribute('class', 'form-control');
     part2.appendChild(passwordLabel);
     part2.appendChild(passwordInput);
 
     createExamForm.appendChild(part2);
 
-    // const part3 = document.createElement('div');
-    // const confirmPasswordLabel = document.createElement('label');
-    // confirmPasswordLabel.innerText = 'Retype your password';
-    // confirmPasswordLabel.setAttribute('class', 'form-label');
+    const part3 = document.createElement('div');
+    const confirmPasswordLabel = document.createElement('label');
+    confirmPasswordLabel.innerText = 'Retype your password';
+    confirmPasswordLabel.setAttribute('class', 'form-label');
 
-    // const confirmPasswordInput = document.createElement('input');
-    // confirmPasswordInput.setAttribute('type', 'password');
-    // confirmPasswordInput.required = true;
-    // confirmPasswordInput.setAttribute('id', 'confirm-test-password');
-    // confirmPasswordInput.setAttribute('class', 'form-control');
-    // part3.appendChild(confirmPasswordLabel);
-    // part3.appendChild(confirmPasswordInput);
+    const confirmPasswordInput = document.createElement('input');
+    confirmPasswordInput.setAttribute('type', 'password');
+    confirmPasswordInput.required = true;
+    confirmPasswordInput.setAttribute('id', 'confirm-test-password');
+    confirmPasswordInput.setAttribute('class', 'form-control');
+    part3.appendChild(confirmPasswordLabel);
+    part3.appendChild(confirmPasswordInput);
 
-    // createExamForm.appendChild(part3);
+    createExamForm.appendChild(part3);
 
     const submitButton = document.createElement('button');
     submitButton.setAttribute('type', 'submit');
-    submitButton.setAttribute('onClick', 'closeAddExam()');
     submitButton.innerText = 'Create Test';
     submitButton.setAttribute('class', 'btn control-btn');
     submitButton.setAttribute('style', 'margin-top: 2%');
 
     createExamForm.appendChild(submitButton);
 
-    document.getElementById('addExamForm').appendChild(createExamForm);
+    document.body.appendChild(createExamForm);
     createExamForm.setAttribute('z-index', '1000000000');
     createExamForm.setAttribute('style', `
     background: #25408f;
@@ -221,7 +185,6 @@ document.querySelector('#add-button').onclick = function() {
     text-align: center`);
 } 
 
-function closeAddExam() {
-    document.getElementById("addExamForm").innerHTML = "";
-    window.location.href = 'addExam.php';
-}
+
+
+
