@@ -30,7 +30,6 @@ if (isset($_GET['id'])) {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $quest = $row['quest'];
-
             $question_id = $row['id'];
             $answer1 = $row['answer1'];
             $answer2 = $row['answer2'];
