@@ -170,33 +170,33 @@ document.querySelector('#add-button').onclick = function() {
     
     const part2 = document.createElement('div');
     const passwordLabel = document.createElement('label');
-    passwordLabel.innerText = 'Choose a password';
+    passwordLabel.innerText = 'Choose a date';
     passwordLabel.setAttribute('class', 'form-label');
     
     const passwordInput = document.createElement('input');
-    passwordInput.setAttribute('type', 'password');
+    passwordInput.setAttribute('type', 'date');
     passwordInput.required = true;
-    passwordInput.setAttribute('id', 'test-password');
+    passwordInput.setAttribute('id', 'test-date');
     passwordInput.setAttribute('class', 'form-control');
     part2.appendChild(passwordLabel);
     part2.appendChild(passwordInput);
 
     createExamForm.appendChild(part2);
 
-    const part3 = document.createElement('div');
-    const confirmPasswordLabel = document.createElement('label');
-    confirmPasswordLabel.innerText = 'Retype your password';
-    confirmPasswordLabel.setAttribute('class', 'form-label');
+    // const part3 = document.createElement('div');
+    // const confirmPasswordLabel = document.createElement('label');
+    // confirmPasswordLabel.innerText = 'Retype your password';
+    // confirmPasswordLabel.setAttribute('class', 'form-label');
 
-    const confirmPasswordInput = document.createElement('input');
-    confirmPasswordInput.setAttribute('type', 'password');
-    confirmPasswordInput.required = true;
-    confirmPasswordInput.setAttribute('id', 'confirm-test-password');
-    confirmPasswordInput.setAttribute('class', 'form-control');
-    part3.appendChild(confirmPasswordLabel);
-    part3.appendChild(confirmPasswordInput);
+    // const confirmPasswordInput = document.createElement('input');
+    // confirmPasswordInput.setAttribute('type', 'password');
+    // confirmPasswordInput.required = true;
+    // confirmPasswordInput.setAttribute('id', 'confirm-test-password');
+    // confirmPasswordInput.setAttribute('class', 'form-control');
+    // part3.appendChild(confirmPasswordLabel);
+    // part3.appendChild(confirmPasswordInput);
 
-    createExamForm.appendChild(part3);
+    // createExamForm.appendChild(part3);
 
     const submitButton = document.createElement('button');
     submitButton.setAttribute('type', 'submit');
@@ -223,4 +223,5 @@ document.querySelector('#add-button').onclick = function() {
 
 function closeAddExam() {
     document.getElementById("addExamForm").innerHTML = "";
+    window.location.href = 'addExam.php';
 }
