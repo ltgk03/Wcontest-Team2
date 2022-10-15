@@ -160,6 +160,8 @@
                     
             d +=        '<div class="row" style="margin-left:10px;" id = "question_' + v['id']+'"> ';
             d +=        '<h5 style="font-weight:bold;" id ='+v['id']+'> <span class = "text-danger">Câu ' + index +': </span>' + v['quest'] +'</h5>';
+            if (v['filepath'] != null) d += '<img src = assets/image/' + v['filepath'] + '>';
+
             d +=         '<fieldset id = "group'+index+'">';
             d +=        '<div class="radio col-md-12">';
             d +=        '    <label  class = "answer1"><input type="radio" class="rdOptionA" name = "group'+index+'"><span class = "text-danger">A: </span> '+v['answer1']+' </label>';
