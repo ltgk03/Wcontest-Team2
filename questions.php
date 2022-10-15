@@ -17,65 +17,15 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="./assets/css/questions.css">
 </head>
-
 <body>
-    <div class="container"></div>
-    <div class="panel-group">
-
-        <div class="panel panel-primary">
-            <div class="panel-heading">Làm bài thi trắc nghiệm</div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-sm-12 text-right">
-                        <button type="button" name="button" class="btn btn-success" id="btnStart"> Start</button>
-                    </div>
-
-                </div>
-                <div id="questions"></div>
-
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <button type="button" name="button" class="btn btn-warning" id="btnFinish">Nộp bài</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <h4 id="mark" class ="text-info"></h4>
-                    </div>
-                </div>
-                <!-- <div class="row" style="margin-left:10px;">
-
-
-                    <h5 style="font-weight:bold;">Quest</h5>
-                    <div class="radio col-md-12">
-                        <label><input type="radio" name="optradio" class="rdOptionA">A</label>
-                    </div>
-                    <div class="radio col-md-12">
-                        <label><input type="radio" name="optradio" class="rdOptionB">b</label>
-                    </div>
-                    <div class="radio col-md-12">
-                        <label><input type="radio" name="optradio" class="rdOptionC">c</label>
-                    </div>
-                    <div class="radio col-md-12">
-                        <label><input type="radio" name="optradio" class="rdOptionD">d</label>
-                    </div>
-
-                </div> -->
-            </div>
-        </div>
-
-
-    </div>
-
-
-
-
+    <!-- <div><h1>Welcome to the Exam</h1></div> -->
+    <!-- <button type="button" name="button" class="btn btn-success" id="btnStart"> Start</button> -->
+                
+    <!-- <div id="questions" class="container" style="width: "></div>           -->
+    <button type="button" name="button" class="btn btn-warning" id="btnFinish">Nộp bài</button>
 </body>
-
-</html>
-
 <script type="text/javascript">
     $(document).ready(function() {
         $('#btnFinish').hide();
@@ -104,9 +54,6 @@
     
             let question = questions.find(x=>x.id == id);
             let answer = question['ranswer'];
-            
-            
-
             //Bước 2: lấy từ người dùng
             let da = $(v).find('fieldset input[type = "radio"]:checked').attr('class');
             //da: đáp án của người dùng
@@ -135,13 +82,8 @@
         $('#question_'+id+' >fieldset>div>label.'+answer).innerHTML('<span class="glyphicon glyphicon-ok"></span>');
         });
         console.log('Điểm của bạn là: ' + mark + '/' + sum(index,-1));
-        $('#mark').text('Điểm của bạn là: ' + mark + '/' + sum(index,-1));
-       
-        
+        $('#mark').text('Điểm của bạn là: ' + mark + '/' + sum(index,-1));    
     };
-
-
-
     $('#btnStart').click(function() {
         GetQuestions();
     });
@@ -152,12 +94,9 @@
             type: 'get',
             success: function(data) {
                 questions = jQuery.parseJSON( data);
-                
                 index = 1;
                 let d  = '';
-                $.each(questions,function(k,v) {
-                  
-                    
+                $.each(questions,function(k,v) {         
             d +=        '<div class="row" style="margin-left:10px;" id = "question_' + v['id']+'"> ';
             d +=        '<h5 style="font-weight:bold;" id ='+v['id']+'> <span class = "text-danger">Câu ' + index +': </span>' + v['quest'] +'</h5>';
             if (v['filepath'] != null) d += '<img src = assets/image/' + v['filepath'] + '>';
@@ -186,3 +125,6 @@
         });
     }
 </script>
+<script src="./assets/js/questions.js"></script>
+</html>
+

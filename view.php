@@ -69,7 +69,7 @@ $result = $conn->query($sql);
                 }
                 ?>
             </tbody>
-            <!-- <tfoot style="background-color: #25408f">
+            <tfoot style="background-color: #25408f">
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Question</th>
@@ -80,7 +80,7 @@ $result = $conn->query($sql);
                     <th scope="col">Right answer</th>
                     <th scope="col">Action</th>
                 </tr>
-            </tfoot> -->
+            </tfoot>
         </table>
     </div>
     <div class="container" style="z-index: 1">
@@ -90,5 +90,4 @@ $result = $conn->query($sql);
        
     
 </body>
-<script src="./assets/js/view.js"></script>
 </html>

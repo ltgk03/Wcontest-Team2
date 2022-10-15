@@ -67,7 +67,7 @@
         </fieldset>
     </form>
 
-    <a href="view.php">xem cơ sở dữ liệu</a>
+    <a href="view.php">All Question</a>
 </body>
 
 </html>
