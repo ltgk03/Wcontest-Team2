@@ -132,7 +132,7 @@
             }
              // Bước 3: đánh dấu câu hỏi nào đúng, câu nào sai
         
-        $('#question_'+id+' >fieldset>div>label.'+answer).css('background-color','yellow');
+        $('#question_'+id+' >fieldset>div>label.'+answer).innerHTML('<span class="glyphicon glyphicon-ok"></span>');
         });
         console.log('Điểm của bạn là: ' + mark + '/' + sum(index,-1));
         $('#mark').text('Điểm của bạn là: ' + mark + '/' + sum(index,-1));
