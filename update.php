@@ -1,7 +1,6 @@
 <?php
 include "config.php";
 
-<<<<<<< Updated upstream
 if (isset($_POST['update'])) {
     $quest = $_POST['quest'];
     $question_id = $_GET['id'];
@@ -16,32 +15,11 @@ if (isset($_POST['update'])) {
     $result = $conn->query($sql);
 
     if ($result == TRUE) {
-        echo "Record Updated Succesfully";
+        echo "<p>Record Updated Succesfully!</p>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
-=======
-// if (isset($_POST['update'])) {
-//     $quest = $_POST['quest'];
-//     $question_id = $_GET['id'];
-//     $answer1 = $_POST['answer1'];
-//     $answer2 = $_POST['answer2'];
-//     $answer3 = $_POST['answer3'];
-//     $answer4 = $_POST['answer4'];
-//     $ranswer = $_POST['ranswer'];
-
-//     $sql = "UPDATE question SET quest = '$quest', answer1 = '$answer1', answer2 = '$answer2', answer3 = '$answer3', answer4 = '$answer4',  ranswer = '$ranswer' WHERE id = '$question_id'";
-
-//     $result = $conn->query($sql);
-
-//     if ($result == TRUE) {
-//         echo "<p>Record Updated Succesfully!</p>";
-//     } else {
-//         echo "Error: " . $sql . "<br>" . $conn->error;
-//     }
-// }
->>>>>>> Stashed changes
 if (isset($_GET['id'])) {
     $question_id = $_GET['id'];
 

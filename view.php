@@ -60,8 +60,7 @@ $result = $conn->query($sql);
                             <td><?php echo $row['answer3']; ?></td>
                             <td><?php echo $row['answer4']; ?></td>
                             <td><?php echo $row['ranswer']; ?></td>
-                            <td width="13%" ><a href="update.php?id=<?php echo $row['id']; ?>" class="btn btn-info">Edit</a>
-                                <!-- &nbsp; -->
+                            <td width="13%" ><a href="update.php?id=<?php echo $row['id']; ?>" class="btn btn-info">Edit</a>                                <!-- &nbsp; -->
                                 <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
