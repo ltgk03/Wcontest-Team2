@@ -44,13 +44,23 @@ $result = $conn->query($sql);
                         <tr class="align-middle">
                             <th scope="row"><?php echo $row['id']; ?></td>
                             <td><?php echo $row['quest']; ?></td>
+                            <?php
+                                if ($row['filepath'] != NULL) {
+                                    ?>
+                                    <td> <img src = <?php echo "assets/image/" . $row['filepath']; ?> > </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <td> </td>
+                                    <?php
+                                }
+                            ?>
                             <td><?php echo $row['answer1']; ?></td>
                             <td><?php echo $row['answer2']; ?></td>
                             <td><?php echo $row['answer3']; ?></td>
                             <td><?php echo $row['answer4']; ?></td>
                             <td><?php echo $row['ranswer']; ?></td>
-                            <td width="13%" ><a href="update.php?id=<?php echo $row['id']; ?>" class="btn btn-info">Edit</a>
-                                &nbsp;
+                            <td width="13%" ><a href="update.php?id=<?php echo $row['id']; ?>" class="btn btn-info">Edit</a>                                <!-- &nbsp; -->
                                 <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
@@ -59,7 +69,7 @@ $result = $conn->query($sql);
                 }
                 ?>
             </tbody>
-            <tfoot style="background-color: #25408f">
+            <!-- <tfoot style="background-color: #25408f">
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Question</th>
@@ -70,7 +80,7 @@ $result = $conn->query($sql);
                     <th scope="col">Right answer</th>
                     <th scope="col">Action</th>
                 </tr>
-            </tfoot>
+            </tfoot> -->
         </table>
     </div>
     <div class="container" style="z-index: 1">
