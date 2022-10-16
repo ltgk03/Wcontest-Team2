@@ -27,6 +27,7 @@ $result = $conn->query($sql);
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Question</th>
+                    <th scope="col">Picture</th>
                     <th scope="col">Answer1</th>
                     <th scope="col">Answer2</th>
                     <th scope="col">Answer3</th>
@@ -47,7 +48,7 @@ $result = $conn->query($sql);
                             <?php
                                 if ($row['filepath'] != NULL) {
                                     ?>
-                                    <td> <img src = <?php echo "assets/image/" . $row['filepath']; ?> > </td>
+                                    <td> <img src = <?php echo "assets/image/" . $row['filepath']; ?> style = "width: 100px;"> </td>
                                     <?php
                                 } else {
                                     ?>
@@ -73,6 +74,7 @@ $result = $conn->query($sql);
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Question</th>
+                    <th scope="col">Picture</th>
                     <th scope="col">Answer1</th>
                     <th scope="col">Answer2</th>
                     <th scope="col">Answer3</th>

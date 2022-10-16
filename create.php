@@ -1,3 +1,11 @@
+<?php
+// session_start();
+
+
+
+
+// if (isset($_SESSION['id']) && isset($_SESSION['adminAcc'])) {
+    ?>
 
 
 <!DOCTYPE html>
@@ -12,62 +20,52 @@
 </head>
 
 <body>
-    <h2> Signup form </h2>
+    <h2 class = "update_form"> Signup form </h2>
     <form action="" method="POST" enctype="multipart/form-data">
-        <fieldset>
-            <legend>Insert Question</legend>
-            <div class="form-group">
-                <label class="control-label col-sm-2">Question </label>
-                <div class="col-sm-10">
-                    <input type="text" name="quest" class="form-control">
-                </div>
-                <div class="col-sm-10">
+        <fieldset class = "Fieldset">
+            <legend class = "Legend">Insert Question</legend>
+            <div class="parent">
+                <div  class="child">Question:
+                <br>
+                    <textarea id ="quest" type="text" name="quest">
+                    </textarea>
+                    Description picture:
+                    <br>
                     <input class="form-control" type="file" name="uploadfile" value="" />
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2">Answer 1</label>
-                <div class="col-sm-10">
-                    <input type="text" name="answer1" class="form-control">
+                <br>
+                <!-- <div class="chi -->
+            <br>
+            <div class="child">
+                Answer1: <br>
+                    <input type="text" name="answer1" required>
+            <br>Answer2: <br>
+                    <input type="text" name="answer2" required>
+                <br>
+                Answer3: <br>
+                    <input type="text" name="answer3" required>
+                <br>
+                Answer4:<br>
+                    <input type="text" name="answer4" required>
+                <br>
+                <br>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2">Answer 2</label>
-                <div class="col-sm-10">
-                    <input type="text" name="answer2" class="form-control">
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2">Answer 3</label>
-                <div class="col-sm-10">
-                    <input type="text" name="answer3" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2">Answer 4</label>
-                <div class="col-sm-10">
-                    <input type="text" name="answer4" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2">Right answer</label>
-                <div id="ratio-question" class="ratio col-sm-10">
-                    <input type="radio" name="ranswer" value="answer1">answer1
-                    <input type="radio" name="ranswer" value="answer2">answer2
-                    <input type="radio" name="ranswer" value="answer3">answer3
-                    <input type="radio" name="ranswer" value="answer4">answer4
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="control-label col-sm-2">
-                    <span class="glyphicon glyphicon-print"></span>    
-                    <input type="submit" name="submit" value="submit">
-                </div>
-            </div>
+                Ranswer:<br>
+                <br>
+                    <input type="radio" name="ranswer" value="answer1" required>Answer1
+                    <input type="radio" name="ranswer" value="answer2">Answer2
+                    <input type="radio" name="ranswer" value="answer3">Answer3
+                    <input type="radio" name="ranswer" value="answer4">Answer4
+                <br>    
+                    <input class = "button" type="submit" name="submit" value="Submit">
         </fieldset>
     </form>
 
-    <a href="view.php">All Question</a>
+    <a type = "button" href="view.php">Xem cơ sở dữ liệu.</a>
+    <?php if (isset($_GET['show'])) { ?>
+        <div id="invalid" style="text-align: center; color: red; padding-top: 1%; margin: 0; font-size: 1.2rem"><?php echo $_GET['show']; ?></div>
+      <?php } ?>
 </body>
 
 </html>
@@ -100,14 +98,14 @@ if (isset($_POST['submit'])) {
 $result = $conn->query($sql);
 
 if ($result == TRUE) {
-    echo "New record created successfully";
+     header("Location:create.php?show= Question recorded!");
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    header("Location:create.php?show=Error !!!!");
 }
 
 
 $conn->close();
-}
+// }
 
 
-?>
+}?>

@@ -15,13 +15,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!--Icon-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
+  <!-- <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css"> -->
   <link rel="stylesheet" href="./assets/css/loginUI.css">
 
 </head>
 
 <body>
-  <img src="./assets/background-img/computer-background" alt="">
+  <!-- <img src="./assets/background-img/computer-background.jpg" alt="" > -->
   <nav class="navbar navbar-expand-lg bg-transparent">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="https://rabiloo.com/images/logo-menu-white.svg" alt=""></a>
