@@ -17,7 +17,7 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/css/questions.css">
+    <link rel="stylesheet" href="assets/css/questions.css">
 </head>
 
 <body>
@@ -31,7 +31,10 @@
         </div>
     </div>
 
-
+    <div id = "timeleft" style = "text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    width: auto;"></div>
     <div id="questions" class="container"></div>
     <button type="button" name="button" class="btn btn-primary btn-lg position-relative bottom-0 start-50 translate-middle-x" id="btnFinish" style="margin-top: 5%">Nộp bài</button>
     <div class="row showGrade" style="margin-top: 5%">
@@ -41,23 +44,59 @@
     </div>
 </body>
 <script type="text/javascript">
+    let timer = 5; // 45'
+    let timerStart = 0;
+    let isChecked = 0;
     $(document).ready(function() {
         $('#btnFinish').hide();
         $('#questions').hide();
+        $('#timeleft').hide();
+        timer = 5;
+        timerStart = 0;
     });
+    const solve = setInterval(function() {
+        if (timerStart == 0) {
+            $(document).ready(function() {
+                $('#btnFinish').hide();
+                $('#questions').hide();
+                $('#timeleft').hide();
+                timer = 5;
+                timerStart = 0;
+            });
+        } else {
+            
+            var minutes = Math.floor((timer % (60*60)) / 60);
+            var seconds = Math.floor(timer % 60);
+            document.getElementById("timeleft").innerHTML = "Time left: " + minutes + ":" + seconds;
+            if (timer > 0 && timerStart == 1) {
+                timer--;
+            } else {
+                $('#btnFinish').hide();
+                CheckResult();
+                clearInterval(solve);
+                // timerStart = 2;
+            }
+            
+        }
+    }, 1000);
+    
 
     var questions;
     
     let index = 1;
     var uname = "";
+    
+    
     $('#btnStart').click(function() {
         uname = document.getElementById("username").value;
         if (uname != "") {
             if (document.getElementById("error").value != "Tên đăng nhập đã tồn tại, mời nhập lại"){
-            GetQuestions();
-            $('#questions').show();
-            $('#btnFinish').show();
-            $('#startDiv').hide();
+                GetQuestions();
+                $('#questions').show();
+                $('#btnFinish').show();
+                $('#timeleft').show();
+                $('#startDiv').hide();
+                timerStart = 1;
             }
 
         } else {
@@ -75,6 +114,7 @@
         $(this).hide();
         //$('#btnStart').show();
         CheckResult();
+        timerStart = 2;
         
     });
 
@@ -92,6 +132,10 @@
 
     function CheckResult() {
         let mark = 0;
+        if (isChecked == 1) {
+            return;
+        }
+        isChecked = 1;
         $('#questions div.qtest ').each(function(k, v) {
 
             // Bước 1: lấy đáp án đúng của câu hỏi
@@ -119,9 +163,9 @@
             }
             if (choice == answer) {
                 mark++;
-                $("input").prop("disabled", true);
-
+                
             } else {}
+            $("input").prop("disabled", true);
             // Bước 3: đánh dấu câu hỏi nào đúng, câu nào sai
             $('#question_' + id + ' >.answer>fieldset>div>label.' + answer).append('<span class="glyphicon glyphicon-ok"></span>');
         });
@@ -133,9 +177,10 @@
         GetInfo(uname,grade);
 
     };
-    $('#btnStart').click(function() {
-        GetQuestions();
-    });
+    // $('#btnStart').click(function() {
+    //     GetQuestions();
+    //     timerStart = 1;
+    // });
 
     function GetQuestions() {
         $.ajax({
@@ -149,7 +194,7 @@
                     d += '<div id="aQuestion" class="container">'
 
                     d += '<div class = "qtest" id = "question_' + v['id'] + '"> ';
-                    d += '<div class="question">'
+                    d += '<div class="question">';
                     d += '<h5 id =' + v['id'] + '> <span class = "text-danger">Câu ' + index + ': </span>' + v['quest'] + '</h5>';
                     if (v['filepath'] != null) {
                         d += '<img src = assets/image/' + v['filepath'] + ' style = "width:100%;">';
