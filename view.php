@@ -53,7 +53,7 @@ $result = $conn->query($sql);
                                 if ($row['filepath'] != NULL) {
                                     $link = "assets/image/" . $row['filepath'];
                                     // str_replace( "\\ ", " ", $link);
-                                    echo $link;
+                                    // echo $link;
                                     ?>
                                     <td> <img src = <?php echo $link; ?> style = "width: 100px;"> </td>
                                     <?php
