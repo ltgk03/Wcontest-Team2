@@ -67,9 +67,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['adminAcc'])) {
                         </li>
 
                         <li class="nav-item menu-item">
-                            <a href="index.php" class="nav-link align-middle px-0" id="signout-btn">
-                                <i class="bi bi-box-arrow-left"></i> <span class="ms-1 d-none d-sm-inline">Sign out</span>
-                            </a>
+                            <div class="nav-link align-middle px-0" id="signout-btn">
+                                <i class="bi bi-box-arrow-left"></i> <span class="ms-1 d-none d-sm-inline">
+                                <a href="adminLogout.php" style="color: white;">Sign out</a>    
+                                </span>
+                            </div>
                         </li>
 
                     </ul>
@@ -88,7 +90,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['adminAcc'])) {
                 <div class="top-bar">
                     <button type="button" class="btn nav-link control-btn px-2 pt-2 pb-2 mt-3 mb-3" style="display: inline-flex; align-items: center" id="add-button">
                         <i class="bi bi-file-earmark-plus"></i>
-                        <span class="ms-1"><a href="view.php" class="add-exam">ADD EXAM</a></span>
+                        <span class="ms-1"><a href="view.php" class="add-exam">ADD QUESTION</a></span>
                     </button>
                 </div>
                 <div id="workplace">
