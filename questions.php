@@ -152,7 +152,7 @@
                     d += '<div class="question">'
                     d += '<h5 id =' + v['id'] + '> <span class = "text-danger">Câu ' + index + ': </span>' + v['quest'] + '</h5>';
                     if (v['filepath'] != null) {
-                        d += '<img src = assets/image/' + v['filepath'] + '>';
+                        d += '<img src = assets/image/' + v['filepath'] + ' style = "width:100%;">';
                     }
                     d += '</div>';
 
