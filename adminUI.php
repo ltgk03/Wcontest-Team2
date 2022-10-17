@@ -1,3 +1,10 @@
+<?php
+session_start();
+include "config.php";
+
+
+if (isset($_SESSION['id']) && isset($_SESSION['adminAcc'])) {
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wcontest-Team2</title>
     <!-- API (Bootstrap for design, Ajax for DOM)-->
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -81,7 +88,7 @@
                 <div class="top-bar">
                     <button type="button" class="btn nav-link control-btn px-2 pt-2 pb-2 mt-3 mb-3" style="display: inline-flex; align-items: center" id="add-button">
                         <i class="bi bi-file-earmark-plus"></i>
-                        <span class="ms-1"><a href="#" class="add-exam">ADD EXAM</a></span>
+                        <span class="ms-1"><a href="view.php" class="add-exam">ADD EXAM</a></span>
                     </button>
                 </div>
                 <div id="workplace">
@@ -101,3 +108,7 @@
 <script src="./assets/js/adminUI.js"></script>
 
 </html>
+<?php }
+else {
+    echo "bị lỗi rồi";
+} ?>

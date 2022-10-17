@@ -5,6 +5,8 @@ body {
     linear-gradient(to bottom, grey 1px, transparent 1px);
     background-color: #FCF9E9;
 }
+
+
 #startDiv {
     position: absolute;
     left: 50%;
@@ -16,8 +18,9 @@ body {
     height: 50%;
 }
 #headerDiv {
-    height: 10%;
-    font-size: 2rem;
+    height: 12%;
+    font-size: 2.7rem;
+    text-align: center;
     background-color: #FFC92B;
     border-radius: 5px;
     padding-left: 5%;
@@ -28,8 +31,18 @@ body {
     height: 90%;
     border: 2px solid black;
     background-color: #FCF9E9;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+.customBtn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    font-size: 2.2rem;
 }
 
 #aQuestion {
@@ -41,7 +54,7 @@ body {
 .question {
     word-wrap: break-word;
     line-height: 1.5;
-    font-size: 2rem;
+    font-size: 2.2rem;
     background-color: #FFC92B;
     border-radius: 5px;
     padding-left: 5%;
@@ -52,8 +65,11 @@ body {
     
     border: 2px solid black;
     background-color: #FCF9E9;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;    
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;  
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;  
+
 }
 
 .answer .choice {
@@ -62,5 +78,19 @@ body {
     margin: 2% 5%;
 }
 
+h5 {
+    font-size: 2.2rem;
+}
 
+label {
+    font-size: 1.8rem;
+}
+
+#mark {
+    font-size: 2.5rem;
+}
+
+#btnFinish {
+    font-size: 2.2rem;
+}
 

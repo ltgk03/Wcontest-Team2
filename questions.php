@@ -26,12 +26,18 @@
     <div id="startDiv">
         <div id="headerDiv">Welcome to the Exam</div> 
         <div id="bodyDiv" class=" position-relative">
-            <button type="button" name="button" class="btn btn-lg btn-success customBtn position-absolute bottom-0 end-0" id="btnStart"> Start</button>
+            <button type="button" name="button" class="btn btn-lg btn-success customBtn" id="btnStart"> Start</button>
         </div>
     </div>
                 
-    <div id="questions" class="container" style="width: "></div>          
+               
+    <div id="questions" class="container" ></div>          
     <button type="button" name="button" class="btn btn-warning btn-lg position-relative bottom-0 start-50 translate-middle-x" id="btnFinish" style="margin-top: 5%">Nộp bài</button>
+ <div class="row showGrade" style="margin-top: 5%">
+                    <div class="col-sm-12 text-center">
+                        <h4 id="mark" class ="text-info"></h4>
+                    </div>
+                </div>
 </body>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -58,7 +64,7 @@
 
     function CheckResult(){
         let mark = 0;
-        $('#questions div.row').each(function(k,v) {
+        $('#questions div.qtest ').each(function(k,v) {
             
         // Bước 1: lấy đáp án đúng của câu hỏi
         let id = $(v).find('h5').attr('id');
@@ -85,10 +91,12 @@
             }
             if (choice == answer) {
                 mark++;
+                $("input").prop("disabled", true);
+
             } else {
             }
              // Bước 3: đánh dấu câu hỏi nào đúng, câu nào sai
-        $('#question_'+id+' >fieldset>div>label.'+answer).innerHTML('<span class="glyphicon glyphicon-ok"></span>');
+        $('#question_'+id+' >.answer>fieldset>div>label.'+answer).append('<span class="glyphicon glyphicon-ok"></span>');
         });
         console.log('Điểm của bạn là: ' + mark + '/' + sum(index,-1));
         $('#mark').text('Điểm của bạn là: ' + mark + '/' + sum(index,-1));    
@@ -108,30 +116,34 @@
                 $.each(questions,function(k,v) {  
             d +=        '<div id="aQuestion" class="container">'
             
-            d +=        '<div class="question" id = "question_' + v['id']+'"> ';
+            d +=        '<div class = "qtest" id = "question_' + v['id']+'"> ';
+            d +=        '<div class="question">'
             d +=        '<h5 id ='+v['id']+'> <span class = "text-danger">Câu ' + index +': </span>' + v['quest'] +'</h5>';
+                    if (v['filepath'] != null) {
+                    d += '<img src = assets/image/' + v['filepath'] + '>';
+                    }
             d +=        '</div>';            
             
-            d += '<div class="answer">'
-            if (v['filepath'] != null) 
-                d += '<img src = assets/image/' + v['filepath'] + '>';
+
+            d +=        '<div class="answer">'
+                    
             d +=        '<fieldset id = "group'+index+'">';
-            d +=        '<div class="radio bg-success choice">';
-            d +=        '    <label  class = "answer1"><input type="radio" class="rdOptionA" name = "group'+index+'"><span class = "text-danger">A: </span> '+v['answer1']+' </label>';
+            d +=        '<div class="radio choice">';
+            d +=        '    <label  class = "answer1"><input type="radio" class="rdOptionA" name = "group'+index+'"><span class = "text-warning">A: </span> '+v['answer1']+' </label>';
             d +=        '</div>';
-            d +=        '<div class="radio bg-danger choice">';
-            d +=        '    <label class = "answer2"><input type="radio" class="rdOptionB" name = "group'+index+'"><span class = "text-danger">B: </span> '+v['answer2']+'</label>';
+            d +=        '<div class="radio choice">';
+            d +=        '    <label class = "answer2"><input type="radio" class="rdOptionB" name = "group'+index+'"><span class = "text-warning">B: </span> '+v['answer2']+'</label>';
             d +=        '</div>';
-            d +=        '<div class="radio bg-light choice">';
-            d +=        '    <label class = "answer3"><input type="radio" class="rdOptionC" name = "group'+index+'"><span class = "text-danger">C: </span> '+v['answer3']+'</label>';
+            d +=        '<div class="radio choice">';
+            d +=        '    <label class = "answer3"><input type="radio" class="rdOptionC" name = "group'+index+'"><span class = "text-warning">C: </span> '+v['answer3']+'</label>';
             d +=        '</div>';
-            d +=        '<div class="radio bg-info choice">';
-            d +=        '    <label class = "answer4"><input type="radio" class="rdOptionD" name = "group'+index+'"><span class = "text-danger">D: </span> '+v['answer4']+'</label>';
+            d +=        '<div class="radio choice">';
+            d +=        '    <label class = "answer4"><input type="radio" class="rdOptionD" name = "group'+index+'"><span class = "text-warning">D: </span> '+v['answer4']+'</label>';
             d +=        '</div>';
             d +=         '</fieldset>';
-            d +=        '</div>'
-            
-            d +=        '</div>'
+            d +=        '</div>';
+            d +=        '</div>';
+            d +=        '</div>';
             index++;
 
                 });

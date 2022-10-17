@@ -1,5 +1,9 @@
-<?php
+<?php session_start();
+
 include "config.php";
+
+if (isset($_SESSION['id']) && isset($_SESSION['adminAcc'])) {
+
 
 $sql = "SELECT *FROM question";
 
@@ -96,3 +100,5 @@ $result = $conn->query($sql);
     
 </body>
 </html>
+
+<?php } ?>

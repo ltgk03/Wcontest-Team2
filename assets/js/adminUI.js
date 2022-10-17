@@ -120,6 +120,7 @@ const SIGNOUT = () => {
 
 }
 
+
 // ALLEXAM();
 // updateAllExam();
 document.querySelector('#allexam-btn').onclick = function() {

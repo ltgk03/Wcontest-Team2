@@ -1,5 +1,9 @@
-<?php
+<?php session_start();
 include "config.php";
+
+if (isset($_SESSION['id']) && isset($_SESSION['adminAcc'])) {
+
+
 
 if (isset($_POST['update'])) {
     $quest = $_POST['quest'];
@@ -147,7 +151,5 @@ if (isset($_GET['id'])) {
         header('Location: view.php');
     }
 }
-
+}
 ?>
-
-<!--------------------------------------------------------------------------------------------------------------------------------------------------------->

@@ -1,6 +1,4 @@
-<?php
-
-session_start();
+<?php session_start();
 include "config.php";
 
 if (isset($_POST['adminAcc']) && isset($_POST['adminPass'])) {
@@ -12,19 +10,19 @@ if (isset($_POST['adminAcc']) && isset($_POST['adminPass'])) {
         return $data;
     }
 
-    $adminAcc = validate($_POST['adminAcc']);
-    $adminPass = validate($_POST['adminPass']);
+    $Acc = validate($_POST['adminAcc']);
+    $Pass = validate($_POST['adminPass']);
 }
 
 
 
-$sql = "SELECT adminAcc,adminPass FROM adminn WHERE adminAcc = '$adminAcc' and adminPass ='$adminPass'";
+$sql = "SELECT * FROM adminn WHERE adminAcc = '$Acc' and adminPass ='$Pass'";
 
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) === 1) {
     $row = mysqli_fetch_assoc($result);
-    if ($row['adminAcc'] === $adminAcc && $row['adminPass'] === $adminPass) {
+    if ($row['adminAcc'] === $Acc && $row['adminPass'] === $Pass) {
         echo "Logged in";
         $_SESSION['adminAcc'] = $row['adminAcc'];
         $_SESSION['id'] = $row['id'];
