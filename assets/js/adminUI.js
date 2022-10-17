@@ -201,7 +201,7 @@ document.querySelector('#add-button').onclick = function() {
     submitButton.setAttribute('type', 'submit');
     submitButton.setAttribute('onClick', 'closeAddExam()');
     submitButton.innerText = 'Create Test';
-    submitButton.setAttribute('class', 'btn control-btn');
+   
     submitButton.setAttribute('style', 'margin-top: 2%');
 
     createExamForm.appendChild(submitButton);
