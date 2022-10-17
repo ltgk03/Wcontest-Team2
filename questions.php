@@ -18,15 +18,20 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/questions.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 
 <body>
     <div id="startDiv">
         <div id="headerDiv">Welcome to the Exam</div>
         <div id="bodyDiv" class=" position-relative">
-            <label for="username">Mời Nhập Tên của bạn</label>
-            <input type="text" id="username" name="username" required>
-            <div id="error" style="font-size: 1.8rem;"></div>
+            <div id="signIn">
+                <label for="username">Please Type Your Name<i style="margin-left: 4px"class="bi bi-pencil-fill"></i></label>
+                <br>
+                <input type="text" id="username" name="username" class="input-lg"required>
+            </div>
+            
+            <div id="error" style="font-size: 1.8rem"></div>
             <button type="button" name="button" class="btn btn-lg btn-success customBtn" id="btnStart"> Start</button>
         </div>
     </div>
@@ -90,7 +95,7 @@
     $('#btnStart').click(function() {
         uname = document.getElementById("username").value;
         if (uname != "") {
-            if (document.getElementById("error").value != "Tên đăng nhập đã tồn tại, mời nhập lại"){
+            if (document.getElementById("error").value != "The name has already existed!"){
                 GetQuestions();
                 $('#questions').show();
                 $('#btnFinish').show();
