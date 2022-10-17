@@ -47,8 +47,11 @@ $result = $conn->query($sql);
                             <td><?php echo $row['quest']; ?></td>
                             <?php
                                 if ($row['filepath'] != NULL) {
+                                    $link = "assets/image/" . $row['filepath'];
+                                    // str_replace( "\\ ", " ", $link);
+                                    echo $link;
                                     ?>
-                                    <td> <img src = <?php echo "assets/image/" . $row['filepath']; ?> style = "width: 100px;"> </td>
+                                    <td> <img src = <?php echo $link; ?> style = "width: 100px;"> </td>
                                     <?php
                                 } else {
                                     ?>

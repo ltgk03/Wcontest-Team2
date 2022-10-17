@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <br>
     <h2 class = "update_form"> Signup form </h2>
     <form action="" method="POST" enctype="multipart/form-data">
         <fieldset class = "Fieldset">
@@ -81,15 +82,24 @@ if (isset($_POST['submit'])) {
     $ranswer = $_POST['ranswer'];
 
     $filename = $_FILES['uploadfile']['name'];
+    $reFilename = $filename;
+    // str_replace('_', ' ', $reFilename);
+    for ($i = 0; $i < strlen($reFilename); $i++) {
+        if ($reFilename[$i] == ' ') {
+            $reFilename[$i] = '_';
+        }
+    }
+    // rename($filename, $reFilename);
     $tempname = $_FILES["uploadfile"]["tmp_name"];
-    $folder = "./assets/image/" . $filename;
+    $folder = "./assets/image/" . $reFilename;
+    
     $check_uploaded = true;
     if (!is_uploaded_file($tempname)) $check_uploaded = false;
     
     if ($check_uploaded == false) {
         $sql = "INSERT INTO question(quest,answer1,answer2,answer3,answer4,ranswer) VALUES ('$quest','$answer1','$answer2','$answer3','$answer4','$ranswer')";
     } else {
-        $sql = "INSERT INTO question(quest,filepath, answer1,answer2,answer3,answer4,ranswer) VALUES ('$quest','$filename' ,'$answer1','$answer2','$answer3','$answer4','$ranswer')";
+        $sql = "INSERT INTO question(quest,filepath, answer1,answer2,answer3,answer4,ranswer) VALUES ('$quest','$reFilename' ,'$answer1','$answer2','$answer3','$answer4','$ranswer')";
         if (!move_uploaded_file($tempname, $folder)) {
             echo "<h3> Image not uploaded successfully!</h3>";
         }
@@ -99,6 +109,7 @@ $result = $conn->query($sql);
 
 if ($result == TRUE) {
      header("Location:create.php?show= Question recorded!");
+    //  echo $filename . " " . $tempname;
 } else {
     header("Location:create.php?show=Error !!!!");
 }
