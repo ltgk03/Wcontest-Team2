@@ -49,9 +49,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['adminAcc'])) {
                         </li>
 
                         <li class="nav-item menu-item">
-                            <a href="#" class="nav-link align-middle px-0" id="result-btn">
-                                <i class="bi bi-award-fill"></i><span class="ms-1 d-none d-sm-inline">Results</span>
-                            </a>
+                            <div href="#" class="nav-link align-middle px-0" id="result-btn">
+                                <i class="bi bi-award-fill"></i><span class="ms-1 d-none d-sm-inline">
+                                <a href="viewGrade.php" style="color: white;">Results</a> 
+                                </span>
+                            </div>
                         </li>
 
                         <li class="nav-item menu-item">
@@ -108,6 +110,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['adminAcc'])) {
     </div>
 </body>
 <script src="./assets/js/adminUI.js"></script>
+<script>
+
+</script>
 
 </html>
 <?php }
