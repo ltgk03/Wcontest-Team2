@@ -24,6 +24,10 @@ $result = $conn->query($sql);
 </head>
 
 <body>
+    <div class="container-fluid" id="direction" style="z-index: 1">  
+        <button class="btn" style="float: left; margin-left: 5%; margin-right: auto"> <i class="bi bi-arrow-left" style="margin-right: 5%"></i> <a href="adminUI.php">Back</a></button>
+        <button class="btn" style="float: right; margin-right: 5%; margin-left: auto"> <i class="bi bi-folder-plus" style="margin-right: 5%"></i> <a href="create.php">Add Question</a></button>
+    </div>
     <div class="container table-responsive scrollable" style="z-index: 1">
         <table class="table ctable table-bordered table-hover table-sm" id="dataTable">
         <caption><h1 style="font-size: 1.5rem; color: #F7F7F7">ALL QUESTION</h1></caption>
@@ -92,10 +96,7 @@ $result = $conn->query($sql);
             </tfoot>
         </table>
     </div>
-    <div class="container" style="z-index: 1">
-        <button class="btn" style="float: left; margin-left: 5%; margin-right: auto"> <i class="bi bi-arrow-left" style="margin-right: 5%"></i> <a href="adminUI.php">Back</a></button>
-        <button class="btn" style="float: right; margin-right: 5%; margin-left: auto"> <i class="bi bi-folder-plus" style="margin-right: 5%"></i> <a href="create.php">Add Question</a></button>
-    </div>
+    
        
     
 </body>

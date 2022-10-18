@@ -28,9 +28,10 @@
                 <label for="username">Please Type Your Name<i style="margin-left: 4px"class="bi bi-pencil-fill"></i></label>
                 <br>
                 <input type="text" id="username" name="username" class="input-lg"required>
-            </div>
-            <div id="error" style="font-size: 1.8rem;"></div>
-            <button type="button" name="button" class="btn btn-lg btn-success customBtn" id="btnStart"> Start</button>
+                <div id="error" style="font-size: 1.8rem; color: red"></div>
+        </div>
+            
+        <button type="button" name="button" class="btn btn-lg btn-success customBtn" id="btnStart"> Start</button>
         </div>
     </div>
 
@@ -103,7 +104,7 @@
             }
 
         } else {
-            document.getElementById("error").innerHTML = "Mời nhập tài khoản";
+            document.getElementById("error").innerHTML = "Type your name";
         }
 
     });
